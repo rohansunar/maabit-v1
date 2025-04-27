@@ -1,5 +1,9 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import PortfolioSection from './components/PortfolioSection';
+import TestimonialSection from './components/TestimonialSection';
+import CTASection from './components/CTASection';
+import Footer from './components/Footer';
 import Services from './components/Services';
 import Features from './components/Features';
 import Process from './components/Process';
@@ -9,9 +13,14 @@ export default function Home() {
     <main className="min-h-screen bg-primary">
       <Navbar />
       <Hero />
-      <Services />
+      <PortfolioSection />
+      <TestimonialSection />
+      <CTASection />
+      {/* Optionally keep Services, Features, Process if needed */}
+      {/* <Services />
       <Features />
-      <Process />
-      </main>
+      <Process /> */}
+      <Footer />
+    </main>
   );
 }
