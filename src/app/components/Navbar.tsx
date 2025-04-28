@@ -31,8 +31,12 @@ export default function Navbar() {
 
           {/* Book an Appointment Button */}
           <div className="flex items-center">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors hidden md:block">
-              <a href="https://calendly.com/your-calendly-link" target="_blank" rel="noopener noreferrer">Book an Appointment</a>
+            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors hidden md:block"
+            onClick={() => {
+              window.open('https://calendly.com/dipuraj-thapa/15min');
+            }}
+            >
+              Book an Appointment
             </button>
             {/* Mobile menu button */}
             <div className="md:hidden ml-2">
@@ -75,8 +79,12 @@ export default function Navbar() {
               <MobileNavLink href="/projects">Projects</MobileNavLink>
               <MobileNavLink href="/blog">Blog</MobileNavLink>
               <MobileNavLink href="/career">Career</MobileNavLink>
-              <button className="w-full bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors mt-4">
-                <a href="https://calendly.com/your-calendly-link" target="_blank" rel="noopener noreferrer">Book an Appointment</a>
+              <button className="w-full bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors mt-4"
+              onClick={() => {
+                window.open('https://calendly.com/dipuraj-thapa/15min');
+              }}
+              >
+                Book an Appointment
               </button>
             </div>
           </div>

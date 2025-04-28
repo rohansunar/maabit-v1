@@ -51,7 +51,7 @@ export default function TestimonialSection() {
   return (
     <section className="bg-gradient-to-b from-[#0b1120] to-[#1a237e] py-24 px-4 md:px-0 text-white">
       <div className="max-w-6xl mx-auto text-center">
-        <div className="mb-2 text-sm font-bold text-maabit-blue tracking-widest uppercase">TESTIMONIALS</div>
+        {/* <div className="mb-2 text-sm font-bold text-maabit-blue tracking-widest uppercase">TESTIMONIALS</div> */}
         <h2 className="text-3xl md:text-4xl font-extrabold mb-4 flex flex-col items-center justify-center">
           What <span className="relative inline-block"><span className="text-maabit-blue">Our Clients Say</span>
             <span className="block h-1 bg-maabit-blue rounded-full w-24 mx-auto mt-1 absolute left-1/2 -translate-x-1/2"></span>
