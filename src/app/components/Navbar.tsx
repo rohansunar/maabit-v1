@@ -6,7 +6,7 @@ import { useCalendlyDialog } from '../hooks/useCalendlyDialog';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { openCalendly, CalendlyModal } = useCalendlyDialog('https://calendly.com/dipuraj-thapa/15min');
+  const { openCalendly, CalendlyModal } = useCalendlyDialog();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#e5e7eb] backdrop-blur-lg border-b border-white/10">
@@ -27,7 +27,7 @@ export default function Navbar() {
             <NavLink href="/projects">Projects</NavLink>
             <NavLink href="/blog">Blog</NavLink>
             <NavLink href="/about">About</NavLink>
-            <NavLink href="/career">Career</NavLink>
+            <NavLink href="#">Career</NavLink>
           </div>
 
           {/* Book an Appointment Button */}
@@ -78,7 +78,7 @@ export default function Navbar() {
               <MobileNavLink href="/services">Services</MobileNavLink>
               <MobileNavLink href="/projects">Projects</MobileNavLink>
               <MobileNavLink href="/blog">Blog</MobileNavLink>
-              <MobileNavLink href="/career">Career</MobileNavLink>
+              <MobileNavLink href="#">Career</MobileNavLink>
               <button className="w-full bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors mt-4"
               onClick={openCalendly}
               >

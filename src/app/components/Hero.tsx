@@ -12,7 +12,7 @@ const headlineWords = [
 ];
 
 export default function Hero() {
-  const { openCalendly, CalendlyModal } = useCalendlyDialog('https://calendly.com/dipuraj-thapa/15min');
+  const { openCalendly, CalendlyModal } = useCalendlyDialog();
 
   return (
     <section

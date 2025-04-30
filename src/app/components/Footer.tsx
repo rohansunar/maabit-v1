@@ -4,7 +4,7 @@ import React from "react";
 import { useCalendlyDialog } from "../hooks/useCalendlyDialog";
 
 export default function Footer() {
-  const { openCalendly, CalendlyModal } = useCalendlyDialog('https://calendly.com/dipuraj-thapa/15min');
+  const { openCalendly, CalendlyModal } = useCalendlyDialog();
 
   return (
     <footer className="bg-[#0b1120] text-white pt-0">

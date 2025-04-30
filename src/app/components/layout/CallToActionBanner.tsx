@@ -3,7 +3,7 @@
 import { useCalendlyDialog } from "../../hooks/useCalendlyDialog";
 
 const CallToActionBanner = () => {
-  const { openCalendly, CalendlyModal } = useCalendlyDialog('https://calendly.com/dipuraj-thapa/15min');
+  const { openCalendly, CalendlyModal } = useCalendlyDialog();
 
   return (
     <div className="bg-gradient-to-r from-maabit-blue to-blue-400 text-white py-8 px-4 rounded-2xl text-center my-8">

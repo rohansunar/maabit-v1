@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { PopupModal } from 'react-calendly';
+import { CALENDLY_URL } from '../constants/calendly';
 
-export const useCalendlyDialog = (url: string) => {
+export const useCalendlyDialog = (url: string = CALENDLY_URL) => {
   const [isOpen, setIsOpen] = useState(false);
   const [rootElement, setRootElement] = useState<HTMLElement | null>(null);
 
@@ -25,7 +26,7 @@ export const useCalendlyDialog = (url: string) => {
       url={url}
       onModalClose={closeCalendly}
       open={isOpen}
-      rootElement={rootElement}
+      rootElement={rootElement || document.body}
     />
   );
 

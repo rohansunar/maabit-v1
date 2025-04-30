@@ -4,7 +4,7 @@ import React from "react";
 import { useCalendlyDialog } from "../hooks/useCalendlyDialog";
 
 export default function CTASection() {
-  const { openCalendly, CalendlyModal } = useCalendlyDialog('https://calendly.com/dipuraj-thapa/15min');
+  const { openCalendly, CalendlyModal } = useCalendlyDialog();
 
   return (
     <section className="relative py-20 px-4 md:px-0">
