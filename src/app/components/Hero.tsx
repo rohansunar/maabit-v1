@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useCalendlyDialog } from "../hooks/useCalendlyDialog";
 
 const headlineWords = [
   "Transform Your",
@@ -11,6 +12,8 @@ const headlineWords = [
 ];
 
 export default function Hero() {
+  const { openCalendly, CalendlyModal } = useCalendlyDialog('https://calendly.com/dipuraj-thapa/15min');
+
   return (
     <section
       className="relative text-white pt-32 pb-24 w-full min-h-[700px] flex items-center overflow-hidden"
@@ -91,15 +94,14 @@ export default function Hero() {
                 whileHover={{ scale: 1.07, boxShadow: "0 0 0 4px #0099FF44" }}
                 whileTap={{ scale: 0.97 }}
                 className="bg-maabit-blue text-white px-10 py-5 rounded-2xl hover:shadow-[0_8px_32px_0_rgba(0,153,255,0.25)] transition-all duration-300 font-extrabold flex items-center gap-3 text-xl shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-200 border-2 border-transparent hover:border-maabit-blue animate-glow"
-                onClick={() => {
-                  window.open('https://calendly.com/dipuraj-thapa/15min');
-                }}
+                onClick={openCalendly}
               >
                 Book a Discovery Call
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10m-9 8h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </motion.button>
+              <CalendlyModal />
             </motion.div>
           </motion.div>
 
@@ -231,4 +233,4 @@ function StatItem({ number, text, description }: StatItemProps) {
       <div className="text-sm text-gray-500">{description}</div>
     </motion.div>
   );
-} 
+}

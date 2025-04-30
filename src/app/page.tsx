@@ -4,9 +4,6 @@ import PortfolioSection from './components/PortfolioSection';
 import TestimonialSection from './components/TestimonialSection';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
-import Services from './components/Services';
-import Features from './components/Features';
-import Process from './components/Process';
 
 export default function Home() {
   return (
@@ -21,6 +18,6 @@ export default function Home() {
       <Features />
       <Process /> */}
       <Footer />
-    </main>
+      </main>
   );
 }

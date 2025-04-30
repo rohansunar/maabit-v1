@@ -1,13 +1,24 @@
+'use client';
+
 import React from "react";
+import { useCalendlyDialog } from "../hooks/useCalendlyDialog";
 
 export default function Footer() {
+  const { openCalendly, CalendlyModal } = useCalendlyDialog('https://calendly.com/dipuraj-thapa/15min');
+
   return (
     <footer className="bg-[#0b1120] text-white pt-0">
       {/* Top CTA Bar */}
       <div className="max-w-6xl mx-auto px-4 md:px-0">
         <div className="bg-gradient-to-r from-maabit-blue/80 via-purple-500/60 to-blue-900/80 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 -translate-y-1/2 shadow-lg">
           <div className="text-lg md:text-xl font-bold mb-2 md:mb-0">Ready to transform your digital presence?</div>
-          <button className="bg-white text-maabit-blue font-bold px-8 py-3 rounded-xl shadow hover:bg-blue-50 transition text-base">Book a Free Consultation</button>
+          <button
+            className="bg-white text-maabit-blue font-bold px-8 py-3 rounded-xl shadow hover:bg-blue-50 transition text-base"
+            onClick={openCalendly}
+          >
+            Book a Free Consultation
+          </button>
+          <CalendlyModal />
         </div>
       </div>
       {/* Main Footer */}
@@ -82,4 +93,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-} 
+}

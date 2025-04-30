@@ -2,9 +2,11 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { useCalendlyDialog } from '../hooks/useCalendlyDialog';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { openCalendly, CalendlyModal } = useCalendlyDialog('https://calendly.com/dipuraj-thapa/15min');
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#e5e7eb] backdrop-blur-lg border-b border-white/10">
@@ -23,7 +25,6 @@ export default function Navbar() {
             <NavLink href="/">Home</NavLink>
             <NavLink href="/services">Services</NavLink>
             <NavLink href="/projects">Projects</NavLink>
-            <NavLink href="/portfolio">Portfolio</NavLink>
             <NavLink href="/blog">Blog</NavLink>
             <NavLink href="/about">About</NavLink>
             <NavLink href="/career">Career</NavLink>
@@ -32,12 +33,11 @@ export default function Navbar() {
           {/* Book an Appointment Button */}
           <div className="flex items-center">
             <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors hidden md:block"
-            onClick={() => {
-              window.open('https://calendly.com/dipuraj-thapa/15min');
-            }}
+            onClick={openCalendly}
             >
               Book an Appointment
             </button>
+            <CalendlyModal />
             {/* Mobile menu button */}
             <div className="md:hidden ml-2">
               <button
@@ -80,9 +80,7 @@ export default function Navbar() {
               <MobileNavLink href="/blog">Blog</MobileNavLink>
               <MobileNavLink href="/career">Career</MobileNavLink>
               <button className="w-full bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors mt-4"
-              onClick={() => {
-                window.open('https://calendly.com/dipuraj-thapa/15min');
-              }}
+              onClick={openCalendly}
               >
                 Book an Appointment
               </button>
@@ -114,4 +112,4 @@ function MobileNavLink({ href, children }: { href: string; children: React.React
       {children}
     </Link>
   );
-} 
+}
