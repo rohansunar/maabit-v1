@@ -1,6 +1,7 @@
 'use client';
 
 import React from "react";
+import Link from "next/link";
 import { useCalendlyDialog } from "../hooks/useCalendlyDialog";
 
 export default function Footer() {
@@ -44,31 +45,31 @@ export default function Footer() {
         <div>
           <div className="font-bold mb-3 text-white">Services</div>
           <ul className="space-y-2 text-gray-400 text-sm">
-            <li>Custom Software Development</li>
-            <li>Web Development</li>
-            <li>Mobile App Development</li>
-            <li>AI Solutions</li>
-            <li>Cloud Solutions</li>
+            <li><Link href="/services" className="hover:text-maabit-blue transition-colors">Custom Software Development</Link></li>
+            <li><Link href="/services" className="hover:text-maabit-blue transition-colors">Web Development</Link></li>
+            <li><Link href="/services" className="hover:text-maabit-blue transition-colors">Mobile App Development</Link></li>
+            <li><Link href="/services" className="hover:text-maabit-blue transition-colors">AI Solutions</Link></li>
+            <li><Link href="/services" className="hover:text-maabit-blue transition-colors">Cloud Solutions</Link></li>
           </ul>
         </div>
         {/* Company */}
         <div>
           <div className="font-bold mb-3 text-white">Company</div>
           <ul className="space-y-2 text-gray-400 text-sm">
-            <li>About</li>
-            <li>Portfolio</li>
-            <li>Contact</li>
-            <li>Careers</li>
+            <li><Link href="/about" className="hover:text-maabit-blue transition-colors">About</Link></li>
+            <li><Link href="/#" className="hover:text-maabit-blue transition-colors">Projects</Link></li>
+            <li><Link href="/contact" className="hover:text-maabit-blue transition-colors">Contact</Link></li>
+            <li><Link href="#" className="hover:text-maabit-blue transition-colors">Careers</Link></li>
           </ul>
         </div>
         {/* Resources */}
         <div>
           <div className="font-bold mb-3 text-white">Resources</div>
           <ul className="space-y-2 text-gray-400 text-sm">
-            <li>Blog</li>
-            <li>Case Studies</li>
-            <li>Free Assessments</li>
-            <li>Solution Comparisons</li>
+            <li><Link href="/blog" className="hover:text-maabit-blue transition-colors">Blog</Link></li>
+            <li><Link href="#" className="hover:text-maabit-blue transition-colors">Case Studies</Link></li>
+            <li><Link href="#" className="hover:text-maabit-blue transition-colors">Free Assessments</Link></li>
+            <li><Link href="#" className="hover:text-maabit-blue transition-colors">Solution Comparisons</Link></li>
           </ul>
         </div>
         {/* Connect */}

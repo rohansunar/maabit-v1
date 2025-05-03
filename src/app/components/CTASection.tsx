@@ -1,6 +1,7 @@
 'use client';
 
 import React from "react";
+import Link from "next/link";
 import { useCalendlyDialog } from "../hooks/useCalendlyDialog";
 
 export default function CTASection() {
@@ -29,10 +30,10 @@ export default function CTASection() {
             Schedule Free Consultation
           </button>
           <CalendlyModal />
-          <button className="bg-white/10 border border-white/30 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-white/20 transition text-lg flex items-center gap-2">
+          <Link href="/contact" className="bg-white/10 border border-white/30 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-white/20 transition text-lg flex items-center gap-2">
             Contact Us
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

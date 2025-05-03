@@ -24,9 +24,10 @@ export default function Navbar() {
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center space-x-8">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/services">Services</NavLink>
-            <NavLink href="/projects">Projects</NavLink>
+            <NavLink href="/#">Projects</NavLink>
             <NavLink href="/blog">Blog</NavLink>
             <NavLink href="/about">About</NavLink>
+            <NavLink href="/contact">Contact</NavLink>
             <NavLink href="#">Career</NavLink>
           </div>
 
@@ -76,8 +77,10 @@ export default function Navbar() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <MobileNavLink href="/services">Services</MobileNavLink>
-              <MobileNavLink href="/projects">Projects</MobileNavLink>
+              <MobileNavLink href="/#">Projects</MobileNavLink>
               <MobileNavLink href="/blog">Blog</MobileNavLink>
+              <MobileNavLink href="/about">About</MobileNavLink>
+              <MobileNavLink href="/contact">Contact</MobileNavLink>
               <MobileNavLink href="#">Career</MobileNavLink>
               <button className="w-full bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors mt-4"
               onClick={openCalendly}
