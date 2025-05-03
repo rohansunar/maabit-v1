@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { FaChartLine, FaRobot, FaCode, FaDatabase, FaCloud, FaShieldAlt } from 'react-icons/fa';
 import { HiArrowRight, HiCheck } from 'react-icons/hi';

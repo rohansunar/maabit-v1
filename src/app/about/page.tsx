@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaLightbulb, FaHandshake, FaRocket, FaChartLine } from 'react-icons/fa';

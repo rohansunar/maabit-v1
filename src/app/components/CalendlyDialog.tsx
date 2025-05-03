@@ -15,14 +15,24 @@ export const useCalendlyDialog = (url: string, rootElement?: HTMLElement | null)
     setIsOpen(false);
   }, []);
 
-  const CalendlyModal = useCallback(() => (
-    <PopupModal
-      url={url}
-      onModalClose={closeCalendly}
-      open={isOpen}
-      rootElement={rootElement || document.body}
-    />
-  ), [url, isOpen, closeCalendly, rootElement]);
+  const CalendlyModal = useCallback(() => {
+    // Only render the PopupModal on the client side
+    if (typeof window === 'undefined') {
+      return null; // Return null during server-side rendering
+    }
+
+    // Safe to access document on the client side
+    const root = rootElement || document.body;
+
+    return (
+      <PopupModal
+        url={url}
+        onModalClose={closeCalendly}
+        open={isOpen}
+        rootElement={root}
+      />
+    );
+  }, [url, isOpen, closeCalendly, rootElement]);
 
   return {
     openCalendly,
