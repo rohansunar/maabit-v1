@@ -73,12 +73,13 @@ const services = [
   }
 ];
 
-const stats = [
-  { number: "500+", label: "Projects Completed" },
-  { number: "98%", label: "Client Satisfaction" },
-  { number: "50+", label: "Expert Team Members" },
-  { number: "24/7", label: "Support Available" }
-];
+// Stats data available for future use
+// const stats = [
+//   { number: "500+", label: "Projects Completed" },
+//   { number: "98%", label: "Client Satisfaction" },
+//   { number: "50+", label: "Expert Team Members" },
+//   { number: "24/7", label: "Support Available" }
+// ];
 
 export default function ServicesPage() {
   return (
@@ -147,4 +148,4 @@ export default function ServicesPage() {
       <Footer />
     </main>
   );
-} 
+}

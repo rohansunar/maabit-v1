@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { defaultMetadata } from "./lib/metadata";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -9,6 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  ...defaultMetadata,
   title: "Maabit - Digital Solutions Agency",
   description: "Transform your digital vision into reality with our expert team of developers and designers.",
 };

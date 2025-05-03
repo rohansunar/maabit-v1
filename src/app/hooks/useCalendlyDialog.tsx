@@ -1,11 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { PopupModal } from 'react-calendly';
+import { useEffect, useState } from 'react';
 import { CALENDLY_URL } from '../constants/calendly';
+import { useCalendlyDialog as useCalendlyDialogBase } from '../components/CalendlyDialog';
 
 export const useCalendlyDialog = (url: string = CALENDLY_URL) => {
-  const [isOpen, setIsOpen] = useState(false);
   const [rootElement, setRootElement] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
@@ -13,26 +12,6 @@ export const useCalendlyDialog = (url: string = CALENDLY_URL) => {
     setRootElement(document.getElementById('root') || document.body);
   }, []);
 
-  const openCalendly = () => {
-    setIsOpen(true);
-  };
-
-  const closeCalendly = () => {
-    setIsOpen(false);
-  };
-
-  const CalendlyModal = () => (
-    <PopupModal
-      url={url}
-      onModalClose={closeCalendly}
-      open={isOpen}
-      rootElement={rootElement || document.body}
-    />
-  );
-
-  return {
-    openCalendly,
-    closeCalendly,
-    CalendlyModal,
-  };
+  // Use the base implementation with the current root element
+  return useCalendlyDialogBase(url, rootElement);
 };

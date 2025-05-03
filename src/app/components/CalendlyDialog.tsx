@@ -1,35 +1,35 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { PopupModal } from 'react-calendly';
 
-interface CalendlyDialogProps {
-  url: string;
-  rootElement?: HTMLElement | null;
-}
-
-const CalendlyDialog: React.FC<CalendlyDialogProps> = ({ url, rootElement }) => {
+// Create a custom hook instead of a component
+export const useCalendlyDialog = (url: string, rootElement?: HTMLElement | null) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const openCalendly = () => {
+  const openCalendly = useCallback(() => {
     setIsOpen(true);
-  };
+  }, []);
 
-  const closeCalendly = () => {
+  const closeCalendly = useCallback(() => {
     setIsOpen(false);
-  };
+  }, []);
+
+  const CalendlyModal = useCallback(() => (
+    <PopupModal
+      url={url}
+      onModalClose={closeCalendly}
+      open={isOpen}
+      rootElement={rootElement || document.body}
+    />
+  ), [url, isOpen, closeCalendly, rootElement]);
 
   return {
     openCalendly,
-    calendlyModal: (
-      <PopupModal
-        url={url}
-        onModalClose={closeCalendly}
-        open={isOpen}
-        rootElement={rootElement}
-      />
-    ),
+    closeCalendly,
+    CalendlyModal,
   };
 };
 
-export default CalendlyDialog;
+// Export the hook as default for backward compatibility
+export default useCalendlyDialog;

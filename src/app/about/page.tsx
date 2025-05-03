@@ -1,21 +1,9 @@
-import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaLightbulb, FaHandshake, FaRocket, FaChartLine } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTASection from '../components/CTASection';
-
-export const metadata: Metadata = {
-  title: 'About Us | Maabit',
-  description: 'Learn about Maabit - a leading software development agency dedicated to transforming digital visions into reality with innovative solutions.',
-  openGraph: {
-    title: 'About Us | Maabit',
-    description: 'Learn about Maabit - a leading software development agency dedicated to transforming digital visions into reality with innovative solutions.',
-    url: '/about',
-    type: 'website',
-  },
-};
 
 const teamMembers = [
   {
@@ -99,7 +87,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0b1120] to-[#1a237e] opacity-90" />
@@ -238,14 +226,14 @@ export default function AboutPage() {
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-maabit-blue/30"></div>
-            
+
             {/* Timeline items */}
             <div className="space-y-24">
               {milestones.map((milestone, index) => (
                 <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
                   {/* Timeline dot */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-maabit-blue border-4 border-[#0b1120] z-10"></div>
-                  
+
                   {/* Content */}
                   <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-12' : 'text-left pl-12'}`}>
                     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/15 transition-colors duration-300">

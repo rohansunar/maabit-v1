@@ -1,11 +1,21 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/maabit';
+// Define the type for our cached mongoose connection
+interface MongooseCache {
+  conn: typeof mongoose | null;
+  promise: Promise<typeof mongoose> | null;
+}
+
+// Extend the NodeJS global type to include our mongoose cache
+declare global {
+  var mongoose: MongooseCache | undefined;
+}
+
+const MONGODB_URI =
+  process.env.MONGODB_URI || "mongodb://localhost:27017/maabit";
 
 if (!MONGODB_URI) {
-  throw new Error(
-    'Please define the MONGODB_URI environment variable'
-  );
+  throw new Error("Please define the MONGODB_URI environment variable");
 }
 
 /**
@@ -13,10 +23,11 @@ if (!MONGODB_URI) {
  * in development. This prevents connections growing exponentially
  * during API Route usage.
  */
-let cached = global.mongoose;
+let cached: MongooseCache = global.mongoose || { conn: null, promise: null };
 
-if (!cached) {
-  cached = global.mongoose = { conn: null, promise: null };
+// Initialize the global mongoose cache if it doesn't exist
+if (!global.mongoose) {
+  global.mongoose = cached;
 }
 
 async function dbConnect() {
