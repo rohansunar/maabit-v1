@@ -25,10 +25,9 @@ export default function Navbar() {
             <NavLink href="/">Home</NavLink>
             <NavLink href="/services">Services</NavLink>
             <NavLink href="/#">Projects</NavLink>
-            <NavLink href="/blog">Blog</NavLink>
             <NavLink href="/about">About</NavLink>
             <NavLink href="/contact">Contact</NavLink>
-            <NavLink href="#">Career</NavLink>
+            {/* <NavLink href="#">Career</NavLink> */}
           </div>
 
           {/* Book an Appointment Button */}
@@ -78,10 +77,9 @@ export default function Navbar() {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <MobileNavLink href="/services">Services</MobileNavLink>
               <MobileNavLink href="/#">Projects</MobileNavLink>
-              <MobileNavLink href="/blog">Blog</MobileNavLink>
               <MobileNavLink href="/about">About</MobileNavLink>
               <MobileNavLink href="/contact">Contact</MobileNavLink>
-              <MobileNavLink href="#">Career</MobileNavLink>
+              {/* <MobileNavLink href="#">Career</MobileNavLink> */}
               <button className="w-full bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors mt-4"
               onClick={openCalendly}
               >
