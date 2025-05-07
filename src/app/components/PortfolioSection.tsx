@@ -54,7 +54,7 @@ export default function PortfolioSection() {
             </div>
           ))}
         </div>
-        <button className="mt-2 px-8 py-3 bg-white border border-gray-300 rounded-xl font-semibold text-gray-900 hover:bg-gray-100 transition">View All Case Studies &rarr;</button>
+        {/* <button className="mt-2 px-8 py-3 bg-white border border-gray-300 rounded-xl font-semibold text-gray-900 hover:bg-gray-100 transition">View All Case Studies &rarr;</button> */}
       </div>
     </section>
   );

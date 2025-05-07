@@ -162,7 +162,7 @@ export default function Hero() {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 bg-white backdrop-blur-lg rounded-2xl p-8 border border-white/10">
             <StatItem
-              number="39+"
+              number="3+"
               text="Projects Completed"
               description="Successfully delivered projects"
             />
@@ -172,12 +172,12 @@ export default function Hero() {
               description="Skilled team members"
             />
             <StatItem
-              number="3+"
+              number="20"
               text="Years Experience"
               description="Industry expertise"
             />
             <StatItem
-              number="21%"
+              number="100%"
               text="Satisfaction Boost"
               description="Client success rate"
             />

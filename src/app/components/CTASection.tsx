@@ -11,7 +11,7 @@ export default function CTASection() {
     <section className="relative py-20 px-4 md:px-0">
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="/cta-bg.jpg"
+          src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
           alt="Team working together"
           className="w-full h-full object-cover object-center opacity-60"
         />
