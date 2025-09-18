@@ -66,7 +66,7 @@ export default function Footer() {
         <div>
           <div className="font-bold mb-3 text-white">Resources</div>
           <ul className="space-y-2 text-gray-400 text-sm">
-            <li><Link href="/blog" className="hover:text-maabit-blue transition-colors">Blog</Link></li>
+            {/* <li><Link href="/blog" className="hover:text-maabit-blue transition-colors">Blog</Link></li> */}
             <li><Link href="#" className="hover:text-maabit-blue transition-colors">Case Studies</Link></li>
             <li><Link href="#" className="hover:text-maabit-blue transition-colors">Free Assessments</Link></li>
             <li><Link href="#" className="hover:text-maabit-blue transition-colors">Solution Comparisons</Link></li>
