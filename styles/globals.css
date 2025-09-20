@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --maabit-blue: #0066FF;
-  --maabit-dark-blue: #0052CC;
+  --maabit-blue: #0066ff;
+  --maabit-dark-blue: #0052cc;
 }
 
 @layer components {
@@ -35,4 +35,4 @@
   .learn-more-btn {
     @apply mt-6 inline-flex items-center gap-2 px-6 py-3 bg-[#0066FF] text-white font-semibold rounded-lg hover:bg-[#0052CC] transition-colors duration-300;
   }
-} 
+}
