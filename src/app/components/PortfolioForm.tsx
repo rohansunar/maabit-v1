@@ -69,7 +69,7 @@ export default function PortfolioForm({ serviceName }: PortfolioFormProps) {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-black"
                     placeholder="Enter your first name"
                   />
                 </div>
@@ -80,7 +80,7 @@ export default function PortfolioForm({ serviceName }: PortfolioFormProps) {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-black"
                     placeholder="Enter your last name"
                   />
                 </div>
@@ -93,7 +93,7 @@ export default function PortfolioForm({ serviceName }: PortfolioFormProps) {
                   <input
                     type="email"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-black"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -103,7 +103,7 @@ export default function PortfolioForm({ serviceName }: PortfolioFormProps) {
                   </label>
                   <input
                     type="tel"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-black"
                     placeholder="+1 (555) 000-0000"
                   />
                 </div>
@@ -123,7 +123,7 @@ export default function PortfolioForm({ serviceName }: PortfolioFormProps) {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-black"
                     placeholder="Your business name"
                   />
                 </div>
@@ -132,7 +132,7 @@ export default function PortfolioForm({ serviceName }: PortfolioFormProps) {
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       Industry *
                     </label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-black">
                       <option>Select Industry</option>
                       <option>Fashion & Apparel</option>
                       <option>Electronics</option>
@@ -146,7 +146,7 @@ export default function PortfolioForm({ serviceName }: PortfolioFormProps) {
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       Project Scale
                     </label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-black">
                       <option>Small (1-3 months)</option>
                       <option>Medium (3-6 months)</option>
                       <option>Large (6-12 months)</option>
@@ -169,7 +169,7 @@ export default function PortfolioForm({ serviceName }: PortfolioFormProps) {
                   </label>
                   <textarea
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-black"
                     placeholder="Tell us about your project requirements and goals..."
                   ></textarea>
                 </div>
@@ -178,7 +178,7 @@ export default function PortfolioForm({ serviceName }: PortfolioFormProps) {
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       Project Budget
                     </label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-black">
                       <option>$1,000 - $5,000</option>
                       <option>$5,000 - $15,000</option>
                       <option>$15,000 - $30,000</option>
@@ -189,7 +189,7 @@ export default function PortfolioForm({ serviceName }: PortfolioFormProps) {
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       Timeline
                     </label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 text-black">
                       <option>1-3 months</option>
                       <option>3-6 months</option>
                       <option>6-12 months</option>
@@ -202,7 +202,7 @@ export default function PortfolioForm({ serviceName }: PortfolioFormProps) {
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold py-4 px-6 rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-[1.02] shadow-lg"
+              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold py-4 px-6 rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 text-black transform hover:scale-[1.02] shadow-lg"
             >
               Get Started with {serviceName}
             </button>
